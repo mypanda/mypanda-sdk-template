@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "./dist/MypandaSDK.min.js",
-  "files": [ "dist" ],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "concurrently 'npm:http' 'npm:watch'",
     "http": "http-server -c-0 -s -o -d=false",
@@ -15,16 +17,11 @@
   "author": "mypanda",
   "license": "ISC",
   "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
     "@types/jest": "^29.4.0",
-    "babel-core": "^6.26.3",
-    "babel-jest": "^29.4.1",
-    "babel-loader": "^9.1.2",
-    "babel-plugin-add-module-exports": "^1.0.4",
-    "babel-preset-env": "^1.7.0",
     "concurrently": "^7.6.0",
     "crypto-js": "^4.1.1",
     "css-loader": "^6.7.3",
-    "eslint": "^8.33.0",
     "file-loader": "^6.2.0",
     "http-server": "^14.1.1",
     "jest": "^29.4.1",

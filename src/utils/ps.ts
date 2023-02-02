@@ -1,9 +1,8 @@
-import AES from 'crypto-js/aes'
-import Pkcs7 from 'crypto-js/pad-pkcs7'
-import ECB from 'crypto-js/mode-ecb'
-import Utf8 from 'crypto-js/enc-utf8'
-import Hex from 'crypto-js/enc-hex'
-import MD5 from 'crypto-js/md5'
+import { AES, MD5 } from 'crypto-js'
+import * as Pkcs7 from 'crypto-js/pad-pkcs7'
+import * as ECB from 'crypto-js/mode-ecb'
+import * as Utf8 from 'crypto-js/enc-utf8'
+import * as Hex from 'crypto-js/enc-hex'
 
 const options = {
   mode: ECB,
@@ -11,7 +10,6 @@ const options = {
 }
 
 export function encode(text:string, key = md5('BR4aFw6rKdNy8CCy')) {
-  console.log('text', text)
   return AES.encrypt(Utf8.parse(text), Utf8.parse(key), options).toString()
 }
 
